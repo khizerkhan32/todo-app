@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Button from './components/button';
+import Input from './components/input';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: 'flex',
+        width: '100%',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
+      <h1 style={{ fontSize: '40px' }}> React Todo App</h1>
+      <div
+        style={{
+          display: 'flex',
+          width: '80%',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          alignItems: 'center',
+          border: '2px solid #AE8B8B',
+        }}
+      >
+        <h3 style={{ fontSize: '40px' }}>Things to do</h3>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '22px' }}>
+          <Input placeholder={'Add new task'}></Input>
+          <Button
+            width={159}
+            onclick={() => {
+              alert('working');
+            }}
+            background={'#5559C3'}
+          >
+            Add New
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }
