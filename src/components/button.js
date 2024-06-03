@@ -7,7 +7,7 @@ function Button(props) {
         width: width,
         borderRadius: '4px',
         background: background,
-        height: 64,
+        height: 46,
         color: 'white',
       }}
       onClick={onclick}
